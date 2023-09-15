@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  envoygateway:
+    build: src/gateways/Envoy/
+
+  coffee.api:
+    image: ${DOCKER_REGISTRY-}coffeeapi
+    build:
+      context: .
+      dockerfile: src/services/Coffee.API/Dockerfile
+
+  tea.api:
+    image: ${DOCKER_REGISTRY-}teaapi
+    build:
+      context: .
+      dockerfile: src/services/Tea.API/Dockerfile

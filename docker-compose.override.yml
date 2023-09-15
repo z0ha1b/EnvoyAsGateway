@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+
+  envoygateway:
+    ports:
+      - "9901:9901"
+      - "10000:10000"
+      - "10001:10001"
+    volumes:
+      - "./src/gateways/Envoy/envoy.yaml:/etc/envoy/envoy.yaml"
+      - "./cert/key.pem:/etc/ssl/certs/key.pem"
+      - "./cert/https.crt:/etc/ssl/certs/https.crt"
+
+  coffee.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80;https://+:443
+    ports:
+      - "8080:80"
+      - "8888:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets
+      - ${USERPROFILE}/.cert/https:/root/.aspnet/https
+
+  tea.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80;https://+:443
+    ports:
+      - "9090:80"
+      - "9999:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets
+      - ${USERPROFILE}/.cert/https:/root/.aspnet/https

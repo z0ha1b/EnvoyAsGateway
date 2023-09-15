@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2021256A-56E8-4BB9-A6C4-17B1548EC0B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{544830EC-C67E-430B-9CD6-E8CE6E8431CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gateways", "gateways", "{EFAA0842-C591-40EA-AAE1-4FFEC5C8C31E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "envoy", "envoy", "{AC45AEF8-2079-46F8-9330-07C727E01AC4}"
+	ProjectSection(SolutionItems) = preProject
+		src\gateways\envoy\Dockerfile = src\gateways\envoy\Dockerfile
+		src\gateways\envoy\envoy.yaml = src\gateways\envoy\envoy.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coffee.API", "src\services\Coffee.API\Coffee.API.csproj", "{1EFBB032-9285-414F-9872-705EEC20E7C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tea.API", "src\services\Tea.API\Tea.API.csproj", "{9C9AFBA5-8D61-4468-A36D-505F2069CF0B}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{58E38EDA-70A7-4D03-BCE6-C34C1D6FF2E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{036BA557-F120-43EC-A4CA-1A712D5ACA44}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EFBB032-9285-414F-9872-705EEC20E7C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EFBB032-9285-414F-9872-705EEC20E7C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EFBB032-9285-414F-9872-705EEC20E7C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EFBB032-9285-414F-9872-705EEC20E7C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9AFBA5-8D61-4468-A36D-505F2069CF0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9AFBA5-8D61-4468-A36D-505F2069CF0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9AFBA5-8D61-4468-A36D-505F2069CF0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9AFBA5-8D61-4468-A36D-505F2069CF0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E38EDA-70A7-4D03-BCE6-C34C1D6FF2E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E38EDA-70A7-4D03-BCE6-C34C1D6FF2E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E38EDA-70A7-4D03-BCE6-C34C1D6FF2E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E38EDA-70A7-4D03-BCE6-C34C1D6FF2E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{544830EC-C67E-430B-9CD6-E8CE6E8431CC} = {2021256A-56E8-4BB9-A6C4-17B1548EC0B3}
+		{EFAA0842-C591-40EA-AAE1-4FFEC5C8C31E} = {2021256A-56E8-4BB9-A6C4-17B1548EC0B3}
+		{AC45AEF8-2079-46F8-9330-07C727E01AC4} = {EFAA0842-C591-40EA-AAE1-4FFEC5C8C31E}
+		{1EFBB032-9285-414F-9872-705EEC20E7C2} = {544830EC-C67E-430B-9CD6-E8CE6E8431CC}
+		{9C9AFBA5-8D61-4468-A36D-505F2069CF0B} = {544830EC-C67E-430B-9CD6-E8CE6E8431CC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAF38849-7AE7-46D7-B8F2-9BBA02EDEB17}
+	EndGlobalSection
+EndGlobal
